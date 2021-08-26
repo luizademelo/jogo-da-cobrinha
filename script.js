@@ -9,7 +9,7 @@ snake[0] =
 }
 
 let gameOver = document.getElementById("gameOver"); 
-let jogadas = document.getElementById("qtdJogadas"); 
+let tamanho = document.getElementById("size"); 
 let amzJogadas = 0; 
 let direction = "right"; 
 let food = 
@@ -60,8 +60,8 @@ function iniciarJogo()
     {
         if(snake[0].x == snake[i].x && snake[0].y < snake[i].y)
         {
-            clearInterval(jogo); 
-            gameOver.style.display = 'block';
+            //clearInterval(jogo); 
+           // gameOver.style.display = 'block';
         }
     }
     createBG();
@@ -85,7 +85,7 @@ function iniciarJogo()
         food.x = Math.floor(Math.random() * 15 + 1) * box; 
         food.y = Math.floor(Math.random() * 15 + 1) * box;
         amzJogadas += 1; 
-        jogadas.innerText = amzJogadas; 
+        tamanho.innerText = amzJogadas; 
     }
 
     let newHead = 
